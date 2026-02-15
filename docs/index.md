@@ -8,7 +8,7 @@
 ## Sobre mim
 Sou apaixonado por **cibersegurança defensiva** e tenho uma **base teórica sólida**, buscando sempre aplicar o conhecimento em projetos práticos. Meu objetivo é construir um **portfólio técnico** que reflita minha evolução na área.  
 
-💡 **Principais características:**
+💡 **Principais carac          terísticas:**
 - Disciplinado, analítico e lógico  
 - Aberto a **feedbacks** e aprendizado contínuo  
 - Interesse em **trabalho em equipe** e colaboração  
