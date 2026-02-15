@@ -11,17 +11,24 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check for Uncompleted Tasks
+      - name: Check for Correct Checklist Format
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          echo "Scanning Pull Request for security compliance..."
+          echo "Scanning Pull Request for mandatory security compliance..."
           
-          # Checks for any empty "[ ]" in the PR description
+          # 1. Verifica se existe algum item vazio: [ ]
           if echo "$PR_BODY" | grep -q "\[ \]"; then
-            echo "❌ ERROR: There are pending items in your security checklist!"
-            echo "Please check all [ ] boxes with [x] before proceeding."
+            echo "❌ ERROR: You left some items empty [ ]."
+            exit 1
+          fi
+
+          # 2. Verifica se existe algo que NÃO SEJA [x] ou [X] nos checklists
+          # Esta regex procura por colchetes que contenham qualquer coisa diferente de um único x
+          if echo "$PR_BODY" | grep -E "\[[^xX ]\]|\[.{2,}\]|\[ \s+ \]" | grep -v "\[[xX]\]" | grep -q "\["; then
+            echo "❌ ERROR: Invalid character detected! Use only [x] to mark items."
+            echo "Make sure there are no spaces or multiple letters inside the brackets."
             exit 1
           else
-            echo "✅ Success: All checklist items are completed."
+            echo "✅ Success: All items correctly marked with [x]."
           fi
