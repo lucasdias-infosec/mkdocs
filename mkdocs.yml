@@ -36,7 +36,7 @@ nav:
   - Home: index.md
   - Projeto Blue-Team-Lab:
     - PT-BR:
-      - Introdução: Blue-Team-Lab/Blue-Team-Lab-PT-BR.md
+      - Introdução: Blue-Team-Lab/PT-BR/Blue-Team-Lab-PT-BR.md
 extra:
   social:
     - icon: fontawesome/brands/github

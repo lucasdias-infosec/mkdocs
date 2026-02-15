@@ -51,6 +51,10 @@ Cada diretório contém:
 
 ## 🔧 Ferramentas Implementadas (em construção)
 
+## Guia para Contribuições
+
+📂 [Guia-de-Contribuições](Guia-de-Contribuições.md)
+
 ## 👤 Autor
 
 Lucas  
