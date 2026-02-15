@@ -1,0 +1,41 @@
+site_name: Lucas Dias Ramos - My Docs
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/Logo.png  # Caminho relativo à pasta docs
+  favicon: assets/Logo.png # Opcional: usa a mesma imagem como ícone da aba
+  palette: 
+    # Modo Claro/Escuro automático baseado no sistema do usuário
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs      # Menu no topo
+    - navigation.sections  # Agrupamento no menu lateral
+    - search.suggest       # Busca inteligente
+    - navigation.expand   # Deixa os menus já abertos por padrão
+    - navigation.top      # Adiciona um botão de "Voltar ao topo" suave
+    - content.code.copy   # Adiciona um botão de "Copiar" nos blocos de código
+nav:
+  - Home: index.md
+  - Projeto Blue-Team-Lab:
+    - PT-BR:
+      - Introdução: Blue-Team-Lab/Blue-Team-Lab-PT-BR.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lucasdias-infosec
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/lucas-dias-ramos-a435a0369
+      
