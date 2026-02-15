@@ -17,7 +17,7 @@ Sou apaixonado por **cibersegurança defensiva** e tenho uma **base teórica só
 
 ## Projetos
 Aqui no GitHub você encontrará meus projetos voltados para **Segurança da Informação**, explorando ferramentas, análises e práticas de **Blue Team**.  
-- Laboratório Blue Team: [Blue-Team-Lab](Blue-Team-Lab/Blue-Team-Lab-PT-BR.md).
+- Laboratório Blue Team: [Blue-Team-Lab](Blue-Team-Lab/PT-BR/Blue-Team-Lab-PT-BR.md).
 ---
 
 ## Projetos paralelos
