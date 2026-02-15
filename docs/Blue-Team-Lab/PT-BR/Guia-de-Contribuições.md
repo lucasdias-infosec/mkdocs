@@ -1,9 +1,3 @@
-Perfeito, vamos ajustar! Faz todo sentido manter o guia de contribuição em Português, já que o seu público ou você mesmo no dia a dia prefere essa comunicação, enquanto mantém o "esqueleto" técnico (PR Template) em inglês para o GitHub.
-
-Aqui está o conteúdo para o seu arquivo CONTRIBUTING.md na raiz do repositório:
-
-Guia de Contribuição (CONTRIBUTING.md)
-Markdown
 # Guia de Contribuição
 
 Obrigado por se interessar em contribuir para este projeto de documentação de Blue Team Lab! Para manter a organização, segurança e clareza, pedimos que siga estas diretrizes.
