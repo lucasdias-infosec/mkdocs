@@ -6,6 +6,7 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: pt-BR
+  
   logo: assets/Logo.png  # Caminho relativo à pasta docs
   favicon: assets/Logo.png # Opcional: usa a mesma imagem como ícone da aba
   palette: 
