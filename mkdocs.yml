@@ -14,6 +14,7 @@ theme:
       scheme: default
       primary: indigo
       accent: indigo
+      
       toggle:
         icon: material/brightness-7
         name: Mudar para modo escuro
