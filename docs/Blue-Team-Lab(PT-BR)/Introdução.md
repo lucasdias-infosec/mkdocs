@@ -5,6 +5,7 @@ Laboratório prático de Segurança da Informação voltado para detecção, mon
 
 ## 🎯 Objetivo
 Construir um ambiente controlado para estudo de:
+
 - Monitoramento de segurança,
 - Análise de logs,
 - Detecção de intrusão,
@@ -41,6 +42,7 @@ lab-blue-team/
 README.md
 
 Cada diretório contém:
+
 - Documentação de instalação,
 - Configurações aplicadas,
 - Ajustes de segurança,
