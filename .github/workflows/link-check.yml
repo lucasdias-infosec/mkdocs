@@ -1,0 +1,33 @@
+name: Link Checker
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+jobs:
+  link-check:
+    name: Link Checker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Link Checker
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          args: >
+            --fail
+            --verbose
+            --no-progress
+            --exclude-mail
+            --max-retries 3
+            --retry-wait-time 2
+            --timeout 20
+            ./docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
