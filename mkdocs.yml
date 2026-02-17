@@ -31,7 +31,6 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.action.view
-    - navigation.expand
 nav:
   - Home: index.md
   - Project Blue-Team-Lab (PT-BR):
