@@ -1,11 +1,15 @@
 name: Check Links
 
 on:
-  push:
   pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
 
 jobs:
-  linkChecker:
+  link-checker:
+    name: 🔗 Link Checker
     runs-on: ubuntu-latest
 
     steps:
