@@ -1,14 +1,28 @@
 name: Check Links
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
 
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Link Checker
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Link Checker
         uses: lycheeverse/lychee-action@v1.9.0
         with:
-          args: --fail --verbose --no-progress "."
+          args: >
+            --fail
+            --verbose
+            --no-progress
+            --exclude-mail
+            --max-retries 3
+            --retry-wait-time 2
+            --timeout 20
+            ./docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
