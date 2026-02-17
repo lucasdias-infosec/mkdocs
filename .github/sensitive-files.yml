@@ -1,0 +1,31 @@
+name: Sensitive Files Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sensitive-files:
+    name: Sensitive Files Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Detect sensitive file extensions
+        run: |
+          echo "Scanning changed files..."
+
+          FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+
+          echo "Changed files:"
+          echo "$FILES"
+
+          if echo "$FILES" | grep -E '\.(env|key|pem|p12|pfx)$'; then
+            echo "Sensitive file detected!"
+            exit 1
+          else
+            echo "No sensitive files detected."
+          fi
