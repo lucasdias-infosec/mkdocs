@@ -28,4 +28,17 @@ Here on GitHub, you will find my projects focused on **Information Security**, e
 
 ---
 
+## 🤝 Contribution Guide
+
+To ensure the quality and consistency of this project, please review our [contribution standards](Contribution-Guide.mp) before submitting any changes.
+
+
+---
+
+## ⚖️ Professional Code of Ethics
+
+This [personal code of ethics](Professional-Code-of-Ethics.md) defines the professional and technical standards I adhere to in information security practice, ensuring integrity, confidentiality, and accountability in all activities.
+
+---
+
 > 💡 "Protecting systems is protecting people." 💡
