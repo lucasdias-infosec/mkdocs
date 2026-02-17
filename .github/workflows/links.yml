@@ -9,7 +9,7 @@ on:
 
 jobs:
   link-checker:
-    name: 🔗 Link Checker
+    name: Link Checker
     runs-on: ubuntu-latest
 
     steps:
