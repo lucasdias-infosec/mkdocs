@@ -10,7 +10,8 @@ Construir um ambiente controlado para estudo de:
 - Análise de logs,
 - Detecção de intrusão,
 - Testes de vulnerabilidades,
-- Hardening de sistemas Linux,
+- Hardening de sistemas Linux.
+
 O laboratório simula um cenário corporativo básico com ferramentas de defesa (Blue Team) e aplicações vulneráveis para testes.
 
 ---
