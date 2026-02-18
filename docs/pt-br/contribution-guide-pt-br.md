@@ -32,7 +32,7 @@ Crie uma branch específica para sua modificação.
 ## 📏 Padronização
 
 - Siga o estilo de escrita já existente nos arquivos Markdown.  
-- Consulte o [Guia de Estilo](style-guide.md) para detalhes sobre formatação, títulos e convenções.
+- Consulte o [Guia de Estilo](style-guide-pt-br.md) para detalhes sobre formatação, títulos e convenções.
 
 ---
 
