@@ -78,9 +78,9 @@ A escolha do Oracle VirtualBox como plataforma de virtualização baseou-se nos 
 - Licenciamento e Custo: O VirtualBox é distribuído sob licença open source, permitindo seu uso gratuito em contextos pessoais, acadêmicos e laboratoriais. Essa característica reduz custos e amplia a flexibilidade do ambiente,
 - Leveza e Baixa Exigência de Hardware: O VirtualBox apresenta baixo consumo de recursos em comparação com outras soluções de virtualização, possibilitando a execução de múltiplas máquinas virtuais mesmo em hardware com limitações de memória e armazenamento,
 - Suporte à Documentação Visual: A ferramenta permite a captura de screenshots diretamente pela interface gráfica, o que facilita:
-  - A documentação dos procedimentos,
-  - A elaboração de relatórios técnicos,
-  - A registro visual de evidências durante os estudos.
+    - A documentação dos procedimentos,
+    - A elaboração de relatórios técnicos,
+    - A registro visual de evidências durante os estudos.
 - Facilidade de Uso e Comunidade: A interface intuitiva e a ampla disponibilidade de documentação tornam o VirtualBox acessível, ao mesmo tempo em que sua comunidade ativa contribui para a rápida resolução de problemas e dúvidas técnicas,
 - Compatibilidade Ampla: O VirtualBox oferece suporte a diversos sistemas operacionais, tanto como host quanto como guest, incluindo Windows, Linux e BSD. Essa compatibilidade é essencial para a simulação de ambientes corporativos heterogêneos.
 
@@ -278,11 +278,11 @@ Essa verificação garantiu que novos volumes poderiam ser criados sem necessida
 Foram criados dois novos Logical Volumes:
 
 - lv_logs
- - Tamanho: 10 GB,
- - Finalidade: Armazenamento de logs do sistema, Suricata, Wazuh, Rsyslog e demais ferramentas de monitoramento.
+Tamanho: 10 GB,
+Finalidade: Armazenamento de logs do sistema, Suricata, Wazuh, Rsyslog e demais ferramentas de monitoramento.
 - lv_srv
- - Tamanho: Espaço restante disponível no Volume Group,
- - Finalidade: Armazenamento de aplicações vulneráveis (ex: DVWA, Juice Shop) e dados associados.
+Tamanho: Espaço restante disponível no Volume Group,
+Finalidade: Armazenamento de aplicações vulneráveis (ex: DVWA, Juice Shop) e dados associados.
 
 A criação desses volumes mantém a separação entre:
 
