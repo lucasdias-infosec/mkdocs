@@ -15,7 +15,7 @@ Sou apaixonado por **cibersegurança defensiva** e tenho uma **base teórica só
 ---
 
 ## Projetos
-[Aqui]() você encontrará meus projetos voltados para **Segurança da Informação**, explorando ferramentas, análises e práticas de **Blue Team**.  
+[Aqui](introducao.md) você encontrará meus projetos voltados para **Segurança da Informação**, explorando ferramentas, análises e práticas de **Blue Team**.  
 
 ---
 
