@@ -31,4 +31,4 @@ Do not make changes directly on `main`. Create a branch for your modification.
 
 ---
 
-[Versão pt-BR](../pt-br/contribution-guide-br.md)
+[Versão pt-BR](../pt-br/contribution-guide-pt-br.md)
