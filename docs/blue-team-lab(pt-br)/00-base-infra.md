@@ -278,9 +278,12 @@ Essa verificação garantiu que novos volumes poderiam ser criados sem necessida
 Foram criados dois novos Logical Volumes:
 
 - lv_logs
-Tamanho: 10 GB,
+
+Tamanho: 10 GB.
 Finalidade: Armazenamento de logs do sistema, Suricata, Wazuh, Rsyslog e demais ferramentas de monitoramento.
+
 - lv_srv
+
 Tamanho: Espaço restante disponível no Volume Group,
 Finalidade: Armazenamento de aplicações vulneráveis (ex: DVWA, Juice Shop) e dados associados.
 

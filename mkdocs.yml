@@ -6,8 +6,8 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: en
-  logo: assets/Logo.png  
-  favicon: assets/Logo.png 
+  logo: assets/logo.png  
+  favicon: assets/logo.png 
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -33,11 +33,11 @@ theme:
 nav:
   - Home: index.md
   - Project Blue-Team-Lab (PT-BR):
-      - Introdução: Blue-Team-Lab(PT-BR)/Introdução.md
+      - Introdução: blue-team-lab(pt-br)/introdução.md
       - Base da Infraestrutura e Instalação de Ferramentas:
-          - Base da Infraestrutura: Blue-Team-Lab(PT-BR)/00-base-infra.md
-  - Contribution-Guide: Contribution-Guide.md
-  - Professional Code of Ethics: Professional-Code-of-Ethics.md
+          - Base da Infraestrutura: blue-team-lab(pt-br)/00-base-infra.md
+  - Contribution-Guide: contribution-guide.md
+  - Professional Code of Ethics: professional-code-of-ethics.md
 extra:
   social:
     - icon: fontawesome/brands/github
