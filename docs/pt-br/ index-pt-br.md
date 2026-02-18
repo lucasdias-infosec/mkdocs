@@ -15,7 +15,7 @@ Sou apaixonado por **cibersegurança defensiva** e tenho uma **base teórica só
 ---
 
 ## Projetos
-[Aqui](https://lucasdias-infosec.github.io/infosec-portfolio/) você encontrará meus projetos voltados para **Segurança da Informação**, explorando ferramentas, análises e práticas de **Blue Team**.  
+[Aqui]() você encontrará meus projetos voltados para **Segurança da Informação**, explorando ferramentas, análises e práticas de **Blue Team**.  
 
 ---
 
@@ -27,13 +27,13 @@ Sou apaixonado por **cibersegurança defensiva** e tenho uma **base teórica só
 
 ## 🤝 Guia de Contribuição  
 
-Para garantir a qualidade e consistência deste projeto, revise os [padrões de contribuição](contribution-guide.md) antes de enviar qualquer alteração.  
+Para garantir a qualidade e consistência deste projeto, revise os [padrões de contribuição](contribution-guide-pr-br.md) antes de enviar qualquer alteração.  
 
 ---
 
 ## ⚖️ Código de Ética Profissional  
 
-Este [código de ética pessoal](professional-code-of-ethics.md) define os padrões profissionais e técnicos que sigo na prática da segurança da informação, assegurando integridade, confidencialidade e responsabilidade em todas as atividades.  
+Este [código de ética pessoal](professional-code-of-ethics-pt-br.md) define os padrões profissionais e técnicos que sigo na prática da segurança da informação, assegurando integridade, confidencialidade e responsabilidade em todas as atividades.  
 
 ---
 
