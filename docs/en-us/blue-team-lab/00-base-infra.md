@@ -130,3 +130,129 @@ The additional features provided by the Extension Pack make the lab more complet
 - Simulation of corporate scenarios that require network boot.
 
 Therefore, the use of the VirtualBox Extension Pack is justified by the significant functional gains it provides for study, controlled testing, and documentation purposes in Information Security.
+
+## 8. Virtual Machine Creation
+
+A dedicated virtual machine was created for the security server using Oracle VirtualBox. The configuration prioritizes lightweight operation, environment control, and fidelity to real corporate server scenarios commonly found in Information Security contexts.
+
+## 9. Operating System
+
+- Distribution: Ubuntu Server
+- Version: 24.04.03 LTS
+- Architecture: amd64 (64-bit)
+
+The choice of Ubuntu Server 24.04 LTS is based on the following factors:
+
+- LTS version, ensuring stability and long-term support,
+- No graphical interface by default, reducing memory consumption,
+- Broad documentation and compatibility with Blue Team tools,
+- Common use in corporate environments, increasing lab realism.
+
+## 10. Virtual Machine Hardware Configuration
+
+### 10.1 RAM
+
+- Allocated RAM: 3 GB
+
+### 10.2 Processor
+
+- vCPUs: 2
+
+## 11. Firmware and Boot Configuration
+
+### 11.1 Boot Mode
+
+The virtual machine was configured to boot in UEFI (Unified Extensible Firmware Interface) mode, replacing legacy BIOS.
+Justification for this choice:
+
+- UEFI is the predominant standard in modern corporate servers and workstations,
+- Provides a more robust and structured boot architecture,
+- Enables support for advanced security and management features,
+- Aligns the lab with contemporary real-world infrastructure scenarios.
+
+## 12. Network Configuration
+
+### 12.1 Host-Only Adapter (Lab Operation)
+
+During normal operation, the lab runs with a network adapter configured in Host-Only mode.
+This mode creates a private network between the host and the virtual machine, without direct internet access or exposure to external networks, enabling controlled and predictable communication.
+The use of Host-Only mode serves the following purposes:
+
+- Ensuring security isolation during simulated attack execution,
+- Preventing malicious traffic leakage to real networks,
+- Simulating an internal corporate scenario where an analyst accesses non-public servers,
+- Providing clean and controlled traffic for analysis by tools such as IDS and SIEM.
+
+### 12.2 Promiscuous Mode
+
+- Configuration: Allow VMs
+
+This configuration is required to allow network packet observation by traffic analysis tools such as Suricata, enabling detection and monitoring studies.
+
+### 12.3 NAT Adapter (Provisioning Phase)
+
+During the initial provisioning phase, a NAT network adapter may be temporarily enabled.
+Exclusive purposes:
+
+- Operating system updates,
+- Installation of packages and dependencies.
+
+After provisioning is complete and a stable base snapshot is created, the NAT adapter is removed, keeping the lab operating in an isolated Host-Only mode.
+
+## 13. Operating System Installation
+
+### 13.1 Installation Type
+
+- Ubuntu Server – minimized installation
+
+The minimized installation option was chosen in order to:
+
+- Reduce the system’s initial attack surface,
+- Lower resource consumption (RAM and storage),
+- Avoid unnecessary services and packages,
+- Maintain greater control over installed components.
+
+This approach ensures that each tool and dependency is installed consciously and documented later, aligning the environment with hardening best practices and the principle of least privilege.
+Even in minimized mode, the system retains essential functionality for remote administration and manual configuration of services required for the lab.
+
+## 14. Storage Configuration
+
+### 14.1 Disk Scheme
+
+- LUKS + LVM
+- Installer default layout
+
+## 15. Remote Access Configuration
+
+### 15.1 SSH
+
+- OpenSSH Server installed during setup
+
+This allows remote server administration and reflects common management practices in corporate environments.
+
+### 15.2 SSH Keys
+
+SSH key import was not performed at this stage, allowing proper hardening policies to be defined later.
+
+## 16. Additional Services
+
+No additional snaps were installed during the initial setup.
+Justification:
+
+- Keep the system clean and controlled,
+- Avoid unnecessary resource consumption,
+- Ensure each tool is installed and documented deliberately.
+
+## 17. Installation Completion
+
+After installation:
+
+- The system was rebooted,
+- The encrypted disk was manually unlocked,
+- Hostname, system version, and SSH access information were correctly displayed.
+
+This confirms that:
+
+- The boot process was successfully completed,
+- LUKS and LVM are operational,
+- The server is ready for security tool configuration.
