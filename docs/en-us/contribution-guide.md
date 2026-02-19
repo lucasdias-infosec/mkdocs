@@ -25,7 +25,7 @@ Do not make changes directly on `main`. Create a branch for your modification.
 
 ### 🔎 Pull Requests
 
-- Fill out the PR template (in English) correctly to make review easier.
+- Fill out the PR template correctly to make review easier.
 - Include a clear description of your changes and objectives.
 - Ensure your PR is reviewed before merging.
 
