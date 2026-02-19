@@ -55,6 +55,7 @@ As contribuições devem:
 - Preencher os templates disponibilizados para Pull Requests e Issues, quando aplicável.
 - Fornecer descrições claras, passos reproduzíveis e contexto técnico suficiente.
 - Manter consistência terminológica e qualidade documental.
+- Os colaboradores também devem seguir o Guia de Contribuição ao enviar alterações.
 
 Submissões que não apresentarem informações técnicas essenciais poderão ser devolvidas para complementação ou revisão.
 
