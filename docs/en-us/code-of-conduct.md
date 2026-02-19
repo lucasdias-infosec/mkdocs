@@ -55,6 +55,7 @@ Contributions should:
 - Complete the provided Pull Request and Issue templates when applicable.
 - Provide clear descriptions, reproducible steps, and sufficient technical context.
 - Maintain consistency in terminology and documentation quality.
+- Contributors must also follow the documented Contribution Guide when submitting changes.
 
 Submissions lacking essential technical information may be returned for clarification or revision.
 
