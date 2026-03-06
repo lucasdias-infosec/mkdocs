@@ -17,7 +17,7 @@ Future audit policies and additional monitored binaries will be implemented and 
 
 Auditd was installed using the package manager:
 
-```batch
+```bash
 sudo apt update && sudo apt install auditd -y
 ```
 
@@ -35,13 +35,13 @@ Enabling Auditd establishes a behavioral monitoring foundation at the operating 
 
 To validate the monitoring workflow, a rule was created to track execution of the binary:
 
-```batch
+```bash
 /usr/bin/base64
 ```
 
 Command used:
 
-``` batch
+``` bash
 sudo auditctl -w /usr/bin/base64 -p x -k monitor_base64
 ```
 
@@ -64,7 +64,7 @@ Its use in this phase was strictly for validation purposes.
 
 To ensure persistence across system reboots, the rule was added to:
 
-``` batch
+``` bash
 /etc/audit/rules.d/audit.rules
 ```
 
