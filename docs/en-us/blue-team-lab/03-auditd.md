@@ -70,19 +70,18 @@ To ensure persistence across system reboots, the rule was added to:
 
 This step ensures that the auditing configuration becomes part of the system's baseline security configuration.
 
-5. Integration with Wazuh
+## 5. Integration
 
+To centralize security events, Auditd logs were integrated into rsyslog. See the process here.
 Auditd-generated events were collected by the Wazuh Agent and forwarded to the Wazuh Manager.
 
 Initially, the events arrived with:
 
-Rule ID: 80700
+- Rule ID: 80700
+- Level: 0
+- This indicated that events were stored but did not generate visible alerts.
 
-Level: 0
-
-This indicated that events were stored but did not generate visible alerts.
-
-6. Custom Rule Creation on the Wazuh Manager
+## 6. Custom Rule Creation on the Wazuh Manager
 
 To elevate the event’s severity and make it operationally relevant, a custom rule override was created in:
 
