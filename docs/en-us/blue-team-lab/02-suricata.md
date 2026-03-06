@@ -88,84 +88,65 @@ Service status was verified with:
 ```bash
 sudo systemctl status suricata
 ```
-## 4. Integration with Wazuh
+## 4. Integration
 
-To centralize security events, Suricata logs were integrated into Wazuh.
+To centralize security events, Suricata logs were integrated into rsyslog. See the process here.
 
-Integration was performed through:
-
-rsyslog configuration for log forwarding
-
-Monitoring of the directory /var/log/suricata/
-
-This integration enables:
-
-Visualization of network alerts within the Wazuh Dashboard
-
-Correlation between host-based and network-based events
-
-Unified incident analysis across multiple security layers
-
-5. Operational Validation (Proof of Concept)
+## 5. Operational Validation (Proof of Concept)
 
 A practical test was performed to validate both Suricata detection and Wazuh integration.
 
-5.1 Alert Generation
+### 5.1 Alert Generation
 
 The following command was executed:
 
+```bach
 curl http://testmynids.com
+```
 
 This domain intentionally triggers IDS signatures.
 
-5.2 Local Verification in Suricata
+### 5.2 Local Verification in Suricata
 
 Real-time log monitoring:
 
+```bach
 sudo tail -f /var/log/suricata/fast.log
+```
 
-Expected outcome:
+Expected outcome: 
 
-Alert entry with rule ID
+- Alert entry with rule ID
+- Severity classification
+- Network flow details (source and destination IPs)
 
-Severity classification
-
-Network flow details (source and destination IPs)
-
-5.3 Verification in Wazuh
+### 5.3 Verification in Wazuh
 
 Within the Wazuh Dashboard:
 
-Security Events → filter by “Suricata”
+- Security Events → filter by “Suricata”
 
 Expected results:
 
-Alerts typically within rule ID range 80000+
+- Alerts typically within rule ID range 80000+
+- Severity classification
+- Source and destination IP addresses involved in the event
 
-Severity classification
-
-Source and destination IP addresses involved in the event
-
-6. Architectural Justification
+## 6. Architectural Justification
 
 The implementation of Suricata introduces a dedicated network monitoring layer to complement the existing host-based monitoring provided by Wazuh.
 
 This architecture enables:
 
-Visibility into malicious network traffic
-
-Signature-based attack detection
-
-Correlation between system-level and network-level events
-
-A more realistic simulation of corporate security environments
+- Visibility into malicious network traffic
+- Signature-based attack detection
+- Correlation between system-level and network-level events
+- A more realistic simulation of corporate security environments
 
 The laboratory now operates under a defense-in-depth model, combining:
 
-Host monitoring (Wazuh Agent/Manager)
-
-Network monitoring (Suricata IDS)
-
-Centralized log analysis (Wazuh Dashboard)
+- Host monitoring (Wazuh Agent/Manager)
+- Network monitoring (Suricata IDS)
+- Centralized log analysis (Wazuh Dashboard)
 
 This multi-layered approach strengthens the overall security posture of the infrastructure and improves detection capability across different attack vectors.
