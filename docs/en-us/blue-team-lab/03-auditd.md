@@ -1,77 +1,72 @@
-Implementation Report: Kernel-Level Binary Execution Monitoring with Auditd and Wazuh Integration
-1. Objective
+# Implementation Auditd
+
+## 1. Objective
 
 To establish a kernel-level auditing layer using Auditd on a Linux server, integrated with Wazuh for centralized monitoring and alert generation.
-
 The primary goal of this phase was not to monitor a single command, but to:
 
-Activate the Linux kernel auditing subsystem.
-
-Define a structured rule creation model.
-
-Integrate audit events into the SIEM.
-
-Validate the full detection pipeline from event generation to dashboard alert.
+- Activate the Linux kernel auditing subsystem.
+- Define a structured rule creation model.
+- Integrate audit events into the SIEM.
+- Validate the full detection pipeline from event generation to dashboard alert.
 
 For validation purposes, a monitoring rule targeting the base64 binary was implemented as a Proof of Concept (PoC).
-
 Future audit policies and additional monitored binaries will be implemented and documented in dedicated modules.
 
-2. Installation and Activation of Auditd
+## 2. Installation and Activation of Auditd
 
 Auditd was installed using the package manager:
 
+```batch
 sudo apt update && sudo apt install auditd -y
+```
 
 Auditd operates as the user-space interface to the Linux kernel auditing subsystem, allowing detailed monitoring of:
 
-Binary execution
-
-File modifications
-
-Permission changes
-
-System calls
-
-Security-relevant system activity
+- Binary execution
+- File modifications
+- Permission changes
+- System calls
+- Security-relevant system activity
 
 Enabling Auditd establishes a behavioral monitoring foundation at the operating system level.
 
-3. Initial Audit Rule Structure (Proof of Concept)
+### 3. Initial Audit Rule Structure (Proof of Concept)
 
 To validate the monitoring workflow, a rule was created to track execution of the binary:
 
+```batch
 /usr/bin/base64
+```
 
 Command used:
 
+``` batch
 sudo auditctl -w /usr/bin/base64 -p x -k monitor_base64
+```
 
 Parameters explained:
 
 -w → defines the path to monitor
-
 -p x → monitors execution permission
-
 -k monitor_base64 → assigns a key for event identification and filtering
 
 The base64 utility was selected due to its common use in:
 
-Data obfuscation
-
-Encoding payloads
-
-Post-exploitation techniques
-
-Potential data exfiltration workflows
+- Data obfuscation
+- Encoding payloads
+- Post-exploitation techniques
+- Potential data exfiltration workflows
 
 Its use in this phase was strictly for validation purposes.
 
-4. Rule Persistence
+## 4. Rule Persistence
 
 To ensure persistence across system reboots, the rule was added to:
 
+``` batch
 /etc/audit/rules.d/audit.rules
+```
 
 This step ensures that the auditing configuration becomes part of the system's baseline security configuration.
 
