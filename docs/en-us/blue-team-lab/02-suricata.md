@@ -1,96 +1,94 @@
-Suricata Implementation as IDS/IPS in the Laboratory Environment
-1. Context
+# Suricata Implementation as IDS/IPS in the Laboratory Environment
+
+# 1. Context
 
 Suricata is a high-performance network intrusion detection engine (IDS) with additional capabilities to operate as:
 
-IDS (Intrusion Detection System)
-
-IPS (Intrusion Prevention System)
-
-NSM (Network Security Monitoring)
+- IDS (Intrusion Detection System)
+- IPS (Intrusion Prevention System)
+- NSM (Network Security Monitoring)
 
 Its implementation in the laboratory aimed to:
 
-Monitor network traffic at the host level.
-
-Detect attack patterns using signature-based rules.
-
-Integrate network-level events into the Wazuh SIEM.
-
-Expand visibility beyond operating system logs.
-
-Because the environment is virtualized (VirtualBox), proper configuration was required to ensure Suricata monitors the correct network interfaces in promiscuous mode.
+- Monitor network traffic at the host level.
+- Detect attack patterns using signature-based rules.
+- Integrate network-level events into the Wazuh SIEM.
+- Expand visibility beyond operating system logs.
 
 2. Suricata Installation
 
 Suricata was installed on a Debian/Ubuntu-based system using the official repositories:
 
+```bash
 sudo apt update
 sudo apt install suricata -y
+```
 
 This method ensures:
 
-Compatibility with the operating system
-
-Automatic dependency handling
-
-Future updates via the APT package manager
+- Compatibility with the operating system
+- Automatic dependency handling
+- Future updates via the APT package manager
 
 After installation, the service was automatically registered within systemd.
 
-3. Detection Engine Configuration
-3.1 Network Interface Identification
+## 3. Detection Engine Configuration
+### 3.1 Network Interface Identification
 
 Network interfaces were identified using:
-
+```bash
 ip a
+```
 
 The monitored interfaces were:
 
-enp0s3
-
-enp0s8
+- enp0s3
+- enp0s8
 
 These were selected based on the laboratory’s network architecture (NAT interface and internal network interface).
 
-3.2 Suricata Main Configuration
+### 3.2 Suricata Main Configuration
 
 The primary configuration file:
 
+```bash
 /etc/suricata/suricata.yaml
+```
 
 Was adjusted to:
 
-Specify the correct network interfaces
+- Specify the correct network interfaces
+- Ensure proper traffic capture
+- Maintain operation in IDS mode (non-inline)
 
-Ensure proper traffic capture
-
-Maintain operation in IDS mode (non-inline)
-
-3.3 Signature Update
+### 3.3 Signature Update
 
 Detection rules were updated using:
 
+```bach
 sudo suricata-update
+```
 
 This step is essential to:
 
-Maintain protection against newly discovered threats
-
-Incorporate updated community rulesets
-
-Increase detection coverage
+- Maintain protection against newly discovered threats
+- Incorporate updated community rulesets
+- Increase detection coverage
 
 3.4 Service Restart and Validation
 
 After applying configuration changes and updating signatures:
 
+```bash
 sudo systemctl restart suricata
+```
 
 Service status was verified with:
 
+```bash
 sudo systemctl status suricata
-4. Integration with Wazuh
+```
+## 4. Integration with Wazuh
 
 To centralize security events, Suricata logs were integrated into Wazuh.
 
