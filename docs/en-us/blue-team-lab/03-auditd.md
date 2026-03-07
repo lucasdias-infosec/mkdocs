@@ -85,78 +85,69 @@ Initially, the events arrived with:
 
 To elevate the event’s severity and make it operationally relevant, a custom rule override was created in:
 
+```bash
 /var/ossec/etc/rules/local_rules.xml
+```
 
 Applied logic:
 
-If rule.id equals 80700
-
-And audit.key equals monitor_base64
-
-Elevate the severity level to 10
+- If rule.id equals 80700
+- And audit.key equals monitor_base64
+- Elevate the severity level to 10
 
 After implementation, execution of the monitored binary triggered a visible alert in the Wazuh Dashboard.
 
-7. Operational Validation
-7.1 Manual Trigger
+## 7. Operational Validation
+### 7.1. Manual Trigger
 
 Execution of the monitored binary:
 
+```bash
 echo "test" | base64
-7.2 Log Testing with Wazuh
+```
+
+### 7.2. Log Testing with Wazuh
 
 Using:
 
+```bash
 /var/ossec/bin/wazuh-logtest
+```
 
 The test confirmed:
 
-Proper decoding of audit.exe
+- Proper decoding of audit.exe
+- Correct identification of audit.key
+- Matching against the custom rule
 
-Correct identification of audit.key
-
-Matching against the custom rule
-
-7.3 Dashboard Verification
+### 7.3. Dashboard Verification
 
 The alert appeared in the Wazuh Dashboard including:
 
-Executable path
-
-Executing user
-
-Timestamp
-
-Rule ID
-
-Elevated severity level
+- Executable path
+- Executing user
+- Timestamp
+- Rule ID
+- Elevated severity level
 
 This confirmed end-to-end functionality of the detection pipeline.
 
-8. Future Expansion
+## 8. Future Expansion
 
 The base64 monitoring rule served as a structural validation of the auditing architecture.
-
 The established framework now allows expansion to include:
-
 Monitoring additional high-risk binaries (e.g., curl, wget, nc, bash)
-
 Tracking modifications to critical files
-
 Auditing privilege escalation attempts
-
 Mapping detection logic to frameworks such as MITRE ATT&CK
-
 These expansions will be documented in dedicated modules to maintain clarity and architectural organization.
 
-9. Architectural Justification
+## 9. Architectural Justification
 
 Enabling Auditd introduces kernel-level behavioral monitoring, complementing existing security layers within the laboratory:
 
-Network monitoring (Suricata)
-
-Host-based monitoring (Wazuh Agent)
-
-Centralized correlation and alerting (Wazuh Manager)
+- Network monitoring (Suricata)
+- Host-based monitoring (Wazuh Agent)
+- Centralized correlation and alerting (Wazuh Manager)
 
 This implementation strengthens the defense-in-depth model and transitions the laboratory from tool installation to structured detection engineering.
