@@ -87,49 +87,37 @@ sudo systemctl status suricata
 
 ## 4. Integração
 
-Para centralizar os eventos de segurança, os logs do Suricata foram integrados ao Wazuh.
+Para centralizar os eventos de segurança, os registros do Suricata foram integrados ao rsyslog. Veja o processo aqui.
 
-A integração foi realizada via:
-
-Configuração do rsyslog para encaminhamento de logs.
-
-Monitoramento do diretório /var/log/suricata/.
-
-Essa integração permite que:
-
-Alertas de rede apareçam no Dashboard do Wazuh.
-
-Eventos sejam correlacionados com logs do sistema.
-
-A análise de incidentes considere múltiplas camadas (host + rede).
-
-5. Validação Operacional (PoC)
+## 5. Validação Operacional (PoC)
 
 Para validar o funcionamento do Suricata e sua integração com o Wazuh, foi realizado um teste prático.
 
-5.1 Geração de Alerta
+### 5.1. Geração de Alerta
 
 Foi executado:
 
+```basg
 curl http://testmynids.com
+```
 
 Esse domínio contém padrões intencionais para disparar regras IDS.
 
-5.2 Verificação Local no Suricata
+### 5.2. Verificação Local no Suricata
 
 Monitoramento do log rápido:
 
+```bash
 sudo tail -f /var/log/suricata/fast.log
+```
 
 Resultado esperado:
 
-Registro de alerta com ID de regra.
+- Registro de alerta com ID de regra.
+- Classificação de severidade.
+- Detalhes do fluxo de rede.
 
-Classificação de severidade.
-
-Detalhes do fluxo de rede.
-
-5.3 Verificação no Wazuh
+### 5.3. Verificação no Wazuh
 
 No Dashboard do Wazuh:
 
@@ -137,30 +125,22 @@ Security Events → filtro por “Suricata”
 
 Eventos esperados:
 
-Alertas com Rule ID geralmente na faixa 80000+.
+- Alertas com Rule ID geralmente na faixa 80000+.
+- Classificação de severidade.
+- IP de origem e destino envolvidos.
 
-Classificação de severidade.
-
-IP de origem e destino envolvidos.
-
-6. Justificativa Arquitetural
+## 6. Justificativa Arquitetural
 
 A implementação do Suricata adiciona ao laboratório uma camada de monitoramento de rede complementar ao monitoramento de host já realizado pelo Wazuh.
-
 Essa arquitetura permite:
 
-Visibilidade de tráfego malicioso.
-
-Detecção baseada em assinatura.
-
-Correlação entre eventos de sistema e eventos de rede.
-
-Simulação mais realista de um ambiente corporativo com múltiplas camadas de defesa.
+- Visibilidade de tráfego malicioso.
+- Detecção baseada em assinatura.
+- Correlação entre eventos de sistema e eventos de rede.
+- Simulação mais realista de um ambiente corporativo com múltiplas camadas de defesa.
 
 O laboratório passa, portanto, a operar sob um modelo de defesa em profundidade (Defense in Depth), combinando:
 
-Monitoramento de host (Wazuh Agent/Manager)
-
-Monitoramento de rede (Suricata IDS)
-
-Análise centralizada de eventos (Wazuh Dashboard)
+- Monitoramento de host (Wazuh Agent/Manager)
+- Monitoramento de rede (Suricata IDS)
+- Análise centralizada de eventos (Wazuh Dashboard)
