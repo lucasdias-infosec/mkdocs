@@ -47,9 +47,9 @@ sudo auditctl -w /usr/bin/base64 -p x -k monitor_base64
 
 Parameters explained:
 
--w → defines the path to monitor
--p x → monitors execution permission
--k monitor_base64 → assigns a key for event identification and filtering
+* -w → defines the path to monitor
+* -p x → monitors execution permission
+* -k monitor_base64 → assigns a key for event identification and filtering
 
 The base64 utility was selected due to its common use in:
 
