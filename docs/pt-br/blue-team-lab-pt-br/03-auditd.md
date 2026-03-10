@@ -2,9 +2,7 @@
 
 ## 1. Objetivo
 
-Implementar uma camada de auditoria no nível do kernel Linux utilizando o Auditd, com integração ao Wazuh, permitindo o monitoramento estruturado da execução de binários sensíveis.
-
-O foco desta etapa não foi o monitoramento isolado de um único comando, mas sim:
+Implementar uma camada de auditoria no nível do kernel Linux utilizando o Auditd, com integração ao Wazuh, permitindo o monitoramento estruturado da execução de binários sensíveis. O foco desta etapa não foi o monitoramento isolado de um único comando, mas sim:
 
 - Ativar o subsistema de auditoria do kernel.
 - Estabelecer um modelo de criação de regras.
