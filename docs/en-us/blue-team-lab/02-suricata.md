@@ -146,3 +146,6 @@ The laboratory now operates under a defense-in-depth model, combining:
 - Centralized log analysis (Wazuh Dashboard)
 
 This multi-layered approach strengthens the overall security posture of the infrastructure and improves detection capability across different attack vectors.
+
+[Versão pt-BR](../../pt-br/blue-team-lab-pt-br/02-suricata.md)
+
