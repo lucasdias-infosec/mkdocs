@@ -153,7 +153,7 @@ New servers can be integrated by simply installing Rsyslog and configuring forwa
 
 Without requiring changes to the central architecture.
 
-### 8.3. Architectural Justification
+### 9. Architectural Justification
 
 Adopting Rsyslog as an intermediary layer promotes:
 
@@ -163,3 +163,5 @@ Adopting Rsyslog as an intermediary layer promotes:
 - Event pipeline organization
 
 The infrastructure evolves toward a structured model of log centralization and correlation, aligned with corporate environment best practices.
+
+[Versão pt-BR](../../pt-br/blue-team-lab-pt-br/04-rsyslog.md)
