@@ -86,7 +86,7 @@ sudo systemctl status suricata
 ```
 ## 4. Integration
 
-To centralize security events, Suricata logs were integrated into rsyslog. See the process here.
+To centralize security events, Suricata logs were integrated into rsyslog. See the process [here](04-rsyslog.md).
 
 ## 5. Operational Validation (PoC)
 
