@@ -9,6 +9,7 @@ The adoption of Wazuh marks the transition of the lab from a merely structured e
 ### 2. Architectural Justification
 
 The choice of Wazuh was motivated by its modular architecture and its ability to integrate, within a single stack, functionalities typically associated with a lightweight SIEM and a host-based intrusion detection system (HIDS).
+
 A single-node (all-in-one) installation mode was selected, in which these systems operate on the same virtual machine:
 
 - Wazuh Indexer
