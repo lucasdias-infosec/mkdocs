@@ -89,11 +89,9 @@ Para transformar o evento em alerta relevante, foi criada uma regra de sobreposi
 
 Lógica aplicada:
 
-Se o evento possuir Rule ID 80700
-
-E audit.key = monitor_base64
-
-Elevar o nível para 10
+- Se o evento possuir Rule ID 80700
+- E audit.key = monitor_base64
+- Elevar o nível para 10
 
 Após essa modificação, o evento passou a ser classificado como alerta crítico no Dashboard.
 
