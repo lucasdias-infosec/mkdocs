@@ -71,8 +71,7 @@ This step ensures that the auditing configuration becomes part of the system's b
 
 ## 5. Integration
 
-To centralize security events, Auditd logs were integrated into rsyslog. See the process here.
-Auditd-generated events were collected by the Wazuh Agent and forwarded to the Wazuh Manager.
+To centralize security events, Auditd logs were integrated into rsyslog. See the process [here](04-rsyslog.md).
 
 Initially, the events arrived with:
 
@@ -148,3 +147,5 @@ Enabling Auditd introduces kernel-level behavioral monitoring, complementing exi
 - Centralized correlation and alerting (Wazuh Manager)
 
 This implementation strengthens the defense-in-depth model and transitions the laboratory from tool installation to structured detection engineering.
+
+[Versão pt-BR](../../pt-br/blue-team-lab-pt-br/03-auditd.md)
