@@ -43,6 +43,7 @@ Essa abordagem garante consistência entre versões e reduz erros de configuraç
 ## 4. Monitoramento Local (Agente Interno)
 
 Como etapa inicial, optou-se por monitorar a própria máquina virtual onde o Manager está instalado.
+
 Essa decisão possui caráter metodológico:
 
 - Permite validar o pipeline completo de coleta → análise → indexação → visualização.
