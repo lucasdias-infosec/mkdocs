@@ -1,4 +1,4 @@
-# Relatório de Implementação Auditd
+# Implementação Auditd
 
 ## 1. Objetivo
 
