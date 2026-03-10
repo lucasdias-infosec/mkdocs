@@ -6,7 +6,7 @@ With the base infrastructure previously consolidated and secure remote access es
 The chosen tool was Wazuh, a widely used open-source platform for log centralization, rule-based detection, file integrity monitoring (FIM), and vulnerability analysis.
 The adoption of Wazuh marks the transition of the lab from a merely structured environment to one capable of observing, correlating, and interpreting security events.
 
-### 1.1. Architectural Justification
+### 2. Architectural Justification
 
 The choice of Wazuh was motivated by its modular architecture and its ability to integrate, within a single stack, functionalities typically associated with a lightweight SIEM and a host-based intrusion detection system (HIDS).
 A single-node (all-in-one) installation mode was selected, in which these systems operate on the same virtual machine:
@@ -23,7 +23,7 @@ This decision was based on three main criteria:
 
 It is acknowledged that, in a production environment, separating components into distinct nodes would be recommended to reduce compromise impact and improve scalability.
 
-## 2. Installation Method
+## 3. Installation Method
 
 Deployment was performed using the official automation script in all-in-one mode:
 
@@ -38,7 +38,7 @@ The -a parameter executes the integrated installation of the following component
 
 This approach ensures version consistency and reduces manual configuration errors.
 
-## 3. Local Monitoring (Internal Agent)
+## 4. Local Monitoring (Internal Agent)
 
 As an initial step, the decision was made to monitor the same virtual machine where the Manager is installed.
 
@@ -50,11 +50,11 @@ This decision is methodological in nature:
 
 The system uses the default internal agent (ID 000), corresponding to the Manager itself.
 
-## 4. Operational Validation (Proof of Concept)
+## 5. Operational Validation (Proof of Concept)
 
 To confirm detection functionality, controlled tests were performed.
 
-### 4.1. Simulation of SSH Authentication Attempts
+### 5.1. Simulation of SSH Authentication Attempts
 
 Multiple login attempts were executed using a non-existent user:
 
