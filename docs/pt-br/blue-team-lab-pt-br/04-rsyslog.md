@@ -99,7 +99,7 @@ Bloco configurado:
 </remote>
 ```
 
-### 5.1. Ajuste Arquitetural
+### 6. Ajuste Arquitetural
 
 Os blocos <localfile> que realizavam leitura direta dos arquivos foram removidos, evitando:
 
@@ -109,8 +109,8 @@ Os blocos <localfile> que realizavam leitura direta dos arquivos foram removidos
 
 A leitura passou a ser responsabilidade exclusiva do Rsyslog.
 
-## 6. Testes de Validação
-### 6.1. Teste de Sistema (Auditd)
+## 7. Testes de Validação
+### 7.1. Teste de Sistema (Auditd)
 
 ```bash
 echo "teste" | base64 -d
@@ -123,7 +123,7 @@ Resultado esperado:
 - Encaminhado ao Manager
 - Exibido no Dashboard
 
-### 6.2. Teste de Rede (Suricata)
+### 7.2. Teste de Rede (Suricata)
 
 ```bash
 curl http://testmyids.com
@@ -136,8 +136,8 @@ Resultado esperado:
 - Encaminhamento via Rsyslog
 - Exibição de alerta contendo IP de origem e destino
 
-## 7. Benefícios Arquiteturais
-### 7.1. Separação de Responsabilidades
+## 8. Benefícios Arquiteturais
+### 8.1. Separação de Responsabilidades
 
 Geração de logs → Ferramentas específicas
 
@@ -145,7 +145,7 @@ Transporte → Rsyslog
 
 Análise e correlação → Wazuh
 
-### 7.2. Escalabilidade
+### 8.2. Escalabilidade
 
 Novos servidores podem ser integrados apenas instalando Rsyslog e configurando o encaminhamento para:
 
@@ -155,7 +155,7 @@ Novos servidores podem ser integrados apenas instalando Rsyslog e configurando o
 
 Sem necessidade de alterar a arquitetura central.
 
-## 8. Justificativa Arquitetural
+## 9. Justificativa Arquitetural
 
 A adoção do Rsyslog como camada intermediária promove:
 
