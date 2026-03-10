@@ -1,6 +1,6 @@
 # Relatório de Implementação: Centralização de Logs com Rsyslog, Auditd, Suricata e Wazuh
 
-# 1. Objetivo
+## 1. Objetivo
 
 Implementar uma arquitetura centralizada de coleta e correlação de eventos de segurança, utilizando o Rsyslog como camada intermediária entre os geradores de log (Auditd e Suricata) e o mecanismo de análise (Wazuh).
 
