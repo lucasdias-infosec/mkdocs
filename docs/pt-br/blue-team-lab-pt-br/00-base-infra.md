@@ -151,11 +151,11 @@ A escolha do Ubuntu Server 24.04 LTS baseia-se nos seguintes fatores:
 
 ### 10.1 Memória RAM
 
-- RAM alocada: 3 GB
+- RAM alocada: 4 GB
 
 ### 10.2 Processador
 
-- vCPUs: 2
+- vCPUs: 4
 
 ## 11. Firmware e Inicialização
 
