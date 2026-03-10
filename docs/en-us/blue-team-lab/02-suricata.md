@@ -88,7 +88,7 @@ sudo systemctl status suricata
 
 To centralize security events, Suricata logs were integrated into rsyslog. See the process here.
 
-## 5. Operational Validation (Proof of Concept)
+## 5. Operational Validation (PoC)
 
 A practical test was performed to validate both Suricata detection and Wazuh integration.
 
