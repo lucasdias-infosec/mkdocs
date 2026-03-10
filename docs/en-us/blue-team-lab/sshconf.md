@@ -126,3 +126,5 @@ The adoption of public key authentication establishes a secure foundation for re
 - Preparing the infrastructure for future hardening measures (e.g., disabling password authentication entirely).
 
 This configuration strengthens the remote access layer of the infrastructure and reinforces the security posture of the laboratory from its foundational stage.
+
+[Versão pt-BR](../../pt-br/blue-team-lab-pt-br/sshconf.md)
