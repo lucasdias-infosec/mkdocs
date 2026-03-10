@@ -70,7 +70,7 @@ Essa etapa consolida a auditoria como parte estrutural da configuração do sist
 
 ## 5. Integração
 
-Para centralizar os eventos de segurança, os registros do Suricata foram integrados ao rsyslog. Veja o processo aqui. Os eventos gerados pelo Auditd passaram a ser coletados pelo Wazuh Agent e encaminhados ao Manager.
+Para centralizar os eventos de segurança, os registros do Suricata foram integrados ao rsyslog. Veja o processo [aqui](04-rsyslog.md).
 
 Inicialmente, os logs chegaram com:
 
