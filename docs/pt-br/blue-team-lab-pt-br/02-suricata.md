@@ -121,7 +121,7 @@ Resultado esperado:
 
 No Dashboard do Wazuh:
 
-Security Events → filtro por “Suricata”
+- Security Events → filtro por “Suricata”
 
 Eventos esperados:
 
@@ -132,6 +132,7 @@ Eventos esperados:
 ## 6. Justificativa Arquitetural
 
 A implementação do Suricata adiciona ao laboratório uma camada de monitoramento de rede complementar ao monitoramento de host já realizado pelo Wazuh.
+
 Essa arquitetura permite:
 
 - Visibilidade de tráfego malicioso.
