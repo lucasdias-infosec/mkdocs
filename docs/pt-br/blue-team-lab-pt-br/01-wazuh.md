@@ -75,7 +75,7 @@ Esse teste confirmou:
 - Processamento pelo mecanismo de regras.
 - Indexação e visualização no dashboard.
 
-### 5.2. Eventos de Inicialização do Sistema
+### 6. Eventos de Inicialização do Sistema
 
 Após reinicialização da máquina virtual, foram registrados:
 
@@ -88,7 +88,7 @@ Isso confirma que:
 - O mecanismo de análise está funcional.
 - A comunicação entre Manager, Indexer e Dashboard está operacional.
 
-## 6. Acesso à Interface
+## 7. Acesso à Interface
 
 O acesso ao Dashboard é realizado via HTTPS:
 
@@ -98,7 +98,7 @@ https://<ip_da_vm>
 
 Credenciais administrativas foram definidas durante a instalação e não são expostas nesta documentação.
 
-## 7. Estado Atual do Ambiente
+## 8. Estado Atual do Ambiente
 
 Após a implantação:
 
