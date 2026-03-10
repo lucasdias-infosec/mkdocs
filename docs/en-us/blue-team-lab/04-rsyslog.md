@@ -90,7 +90,12 @@ In the file:
 Configured block:
 
 ```bash
-<remote> <connection>syslog</connection> <port>515</port> <protocol>udp</protocol> <allowed-ips><LAB_INTERNAL_NETWORK></allowed-ips> </remote>
+<remote>
+  <connection>syslog</connection>
+  <port>515</port>
+  <protocol>udp</protocol>
+  <allowed-ips><LAB_INTERNAL_NETWORK></allowed-ips>
+</remote>
 ```
 
 ## 6. Architectural Adjustment
