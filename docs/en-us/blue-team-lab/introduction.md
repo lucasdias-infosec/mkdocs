@@ -26,7 +26,12 @@ The lab simulates a basic corporate scenario with defensive tools (Blue Team) an
 
 The detailed base infrastructure setup is documented in:
 
-📂 [00-base-infra](00-base-infra.md)
+- [00-base-infra](00-base-infra.md)
+- [01-wazuh](01-wazuh.md)
+- [02-suricata](02-suricata.md)
+- [03-auditd](03-auditd.md)
+- [04-rsyslog](04-rsyslog.md)
+- [SSH Configuration](sshconf.md)
 
 ---
 
@@ -37,8 +42,9 @@ lab-blue-team/
  - 00-base-infra/
  - 01-wazuh/
  - 02-suricata/
- - 03-dvwa/
- - 04-juice-shop/
+ - 03-auditd/
+ - 04-rsyslog/
+ - sshconf/
 
 README.md
 
