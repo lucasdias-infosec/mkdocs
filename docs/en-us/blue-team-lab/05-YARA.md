@@ -1,4 +1,4 @@
-# Implementation Report: File-Based Threat Detection with YARA and Wazuh Integration
+# File-Based Threat Detection with YARA and Wazuh Integration
 
 ## 1. Objective
 
