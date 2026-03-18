@@ -86,14 +86,14 @@ yara -C $COMPILED_RULES -r $SCAN_DIR | while read -r line; do
 done
 ```
 
-### 4.2. Script Responsibilities
+#### 4.1.1. Script Responsibilities
 
 - Compile rules (yarac) for improved performance
 - Execute recursive scans (-r)
 - Log detections in a structured format
 - Standardize output for SIEM integration
 
-4.2. Systemd Service
+### 4.2. Systemd Service
 
 File:
 
@@ -110,8 +110,9 @@ Description=YARA Automation Scan Service
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/yara-scan.sh
-4.3 Scheduled Execution (Timer)
 ```
+
+### 4.3 Scheduled Execution (Timer)
 
 File:
 
@@ -133,6 +134,7 @@ OnUnitActiveSec=5min
 WantedBy=timers.target
 Rationale
 ```
+#### 4.3.1. Rationale
 
 Using a systemd timer provides:
 
