@@ -86,7 +86,7 @@ yara -C $COMPILED_RULES -r $SCAN_DIR | while read -r line; do
 done
 ```
 
-Funções do Script
+#### 4.1.2. Funções do Script
 
 - Compilar regras (yarac) para melhor desempenho
 - Executar varredura recursiva (-r)
@@ -134,7 +134,7 @@ OnUnitActiveSec=5min
 WantedBy=timers.target
 ```
 
-Justificativa
+#### 4.3.1. Justificativa
 
 O uso de systemd timer permite:
 
