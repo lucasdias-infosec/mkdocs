@@ -86,7 +86,7 @@ yara -C $COMPILED_RULES -r $SCAN_DIR | while read -r line; do
 done
 ```
 
-#### 4.1.2. Funções do Script
+#### 4.1.1. Funções do Script
 
 - Compilar regras (yarac) para melhor desempenho
 - Executar varredura recursiva (-r)
